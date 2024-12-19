@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>devosproj1-webapp-packages</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>devosproj1-webapp-packages</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>devosproj1-webapp-packages</id>
+        <url>https://devosproj1-730335668795.d.codeartifact.ap-south-1.amazonaws.com/maven/webapp-packages/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>devosproj1-webapp-packages</id>
+    <name>devosproj1-webapp-packages</name>
+    <url>https://devosproj1-730335668795.d.codeartifact.ap-south-1.amazonaws.com/maven/webapp-packages/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
